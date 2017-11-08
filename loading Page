@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<windows.h>
+int main(){
+int i;
+
+printf("\n\n\n\n\n\n\n\n\t\t\t");
+printf(" loading....\n");
+printf("\t\t");
+for(i=1;i<=25;i++)
+{
+ printf("%c",177);
+ Sleep(200);
+}
+
+return 0;
+}
