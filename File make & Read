@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<string.h>
+
+void re();
+void show();
+int main ()
+{
+    int n;
+
+    printf("\n\t Enter <1> Register\n\t Enter <2> Show Result\n");
+    printf("\n\t => Choice you Option : ");
+    scanf("%d",&n);
+    if (n==1)
+    {
+        re();
+    }
+    else if (n==2)
+    {
+show();
+    }
+    return 0;
+}
+
+
+void re()
+{   char name[20];
+    int age;
+    FILE* fp;
+    fp=fopen("suharto.txt","a+");
+    printf("Enter your name: ");
+    fflush(stdin);
+    gets(name);
+    printf("\nEnter your age: ");
+    scanf("%d",&age);
+    fprintf(fp,"\n%s",name);
+    fprintf(fp,"\n%d",age);
+}
+void show()
+{   char name[20];
+    int age;
+    char read_file[100];
+    FILE* fp;
+    fp=fopen("suharto.txt","r");
+    while(feof(fp)==0)
+    {
+    fscanf(fp,"%s %d",name,&age);
+     printf("\nName:%s  \nAge:%d\n",name,age);
+
+    }
+    
+}
+
