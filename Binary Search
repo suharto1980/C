@@ -1,0 +1,37 @@
+#include<stdio.h>
+main()
+{
+    int a[10],x=0,i,y,z,n,max,min,mid;
+
+    printf("How many elements:");
+    scanf("%d",&n);
+
+
+    printf("Enter the elements:");
+    for(i=0;i<n;i++){
+    scanf("%d",&a[i]);
+
+    }
+    printf("Enter the data to search:");
+    scanf("%d",&z);
+     y=n-1;
+    mid=(x+y)/2;
+    while(x<=y){
+        if(a[mid]==z){
+            printf("%d Found at loctation %d",a[mid],mid+1);
+            break;
+        }
+        else if(a[mid]<z){
+            x=mid+1;
+        }
+        else{
+            y=mid-1;
+
+        }
+           mid=(x+y)/2;
+
+    }
+    if(x>y){printf("Data not found");}
+
+
+}
