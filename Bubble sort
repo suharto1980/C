@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+    int n,b,c=1,i,s[8],j;
+
+    printf("How many data you input: ");
+    scanf("%d",&n);
+    for (i=0;i<n;i++)
+    {
+        scanf("%d",&s[i]);
+
+    }
+    for(i=0;i<n-1;i++)
+    {
+
+        for(j=0;j<n-1-i;j++)
+        {
+            if (s[j]>s[j+1])
+                {
+                b=s[j];
+                s[j]=s[j+1];
+                s[j+1]=b;
+                }
+        }
+    }
+        for(j=0;j<n;j++)
+        {
+          printf("%d",s[j]);
+        }
+        return 0;
+    }
