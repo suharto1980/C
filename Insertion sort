@@ -1,0 +1,28 @@
+
+
+#include<stdio.h>
+int main()
+{
+	int data[100],n,temp,i,j;
+	printf("How data youn input: ");
+	scanf("%d",&n);
+	printf("Enter elements: \n");
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&data[i]);
+	}
+	for(i=1;i<n;i++)
+	{
+		temp = data[i];
+		j=i;
+		while((j>0)&& (temp<data[j-1] ))
+
+		{
+			 data[j]=data[j-1];
+			j--;
+		}
+		data[j]=temp;
+	}
+	printf("In ascending order: ");
+	for(i=0; i<n; i++)
+		printf("%d\t",data[i]);}
