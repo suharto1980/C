@@ -1,0 +1,37 @@
+
+
+#include<stdio.h>
+
+int main()
+{
+    int j=1;
+    int n,i,gcd;
+    int arry[100];
+
+
+    printf(" How many Number you Input:");
+    scanf("%d",&n);
+
+
+    for(i=0;i<n;i++)
+    {
+        printf("\n Enter your %d number = ",i+1);
+        scanf("%d",&arry[i]);
+    }
+     gcd=arry[0];
+
+    while(j<n)
+    {
+       if(arry[j]%gcd==0)
+       {
+           j++;
+       }
+       else
+       {
+           gcd=arry[j]%gcd;
+           i++;
+       }
+    }
+    printf("\n The GCD is = %d ",gcd);
+    return 0;
+}
